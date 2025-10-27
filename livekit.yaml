@@ -5,6 +5,6 @@ rtc:
   port_range_end: 60000
 turn:
   enabled: true
-  udp_port: 3478
+  turn.udp_port: 3478
 keys:
   devkey: secret
