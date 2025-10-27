@@ -39,6 +39,8 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=$TARGETARCH GO111MODULE=on go build -a -o li
 FROM alpine
 
 COPY --from=builder /workspace/livekit-server /livekit-server
+# Expose the LiveKit HTTP port
+EXPOSE 7880
 
 # Run the binary.
 ENTRYPOINT ["/livekit-server"]
