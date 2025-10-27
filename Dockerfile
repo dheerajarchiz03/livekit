@@ -40,7 +40,7 @@ FROM alpine
 
 COPY --from=builder /workspace/livekit-server /livekit-server
 # Expose the LiveKit HTTP port
-EXPOSE 7880
+EXPOSE 7881
 
 # Run the binary.
 ENTRYPOINT ["/livekit-server"]
