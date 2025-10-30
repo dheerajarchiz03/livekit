@@ -7,4 +7,4 @@ turn:
   enabled: true
   turn.udp_port: 3478
 keys:
-  devkey: secret
+  74fecbea0002e0d3: 286573d94aaf51d03d9e23de95d1d3a
