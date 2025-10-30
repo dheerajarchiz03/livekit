@@ -44,3 +44,6 @@ EXPOSE 7883
 
 # Run the binary.
 ENTRYPOINT ["/livekit-server"]
+ENV PORT=7883
+ENV LIVEKIT_PORT=7883
+
