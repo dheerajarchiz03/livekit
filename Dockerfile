@@ -43,7 +43,7 @@ COPY --from=builder /workspace/livekit-server /livekit-server
 EXPOSE 7883
 
 # Run the binary.
-ENTRYPOINT ["/livekit-server"]
+ENTRYPOINT ["/livekit-server", "--config", "/app/livekit.yaml"]
 ENV PORT=7883
 ENV LIVEKIT_PORT=7883
 ENV LIVEKIT_TCP_PORT=7885
