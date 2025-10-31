@@ -39,11 +39,13 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=$TARGETARCH GO111MODULE=on go build -a -o li
 FROM alpine
 
 COPY --from=builder /workspace/livekit-server /livekit-server
-# Expose the LiveKit HTTP port
-EXPOSE 7883
+# Expose the correct LiveKit ports
+EXPOSE 7880
+EXPOSE 7885
 
-# Run the binary.
+# Run the binary with the right config path
 ENTRYPOINT ["/livekit-server", "--config", "/app/livekit.yaml"]
-ENV PORT=7883
-ENV LIVEKIT_PORT=7883
+
+# Environment variables
+ENV LIVEKIT_PORT=7880
 ENV LIVEKIT_TCP_PORT=7885
