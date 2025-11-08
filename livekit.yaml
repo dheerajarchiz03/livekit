@@ -1,16 +1,15 @@
-log_level: info
-
-# WebSocket / main signaling port
+# livekit.yaml
 port: 7880
 
 rtc:
-  tcp_port: 7885
-  port_range_start: 50000
-  port_range_end: 60000
-
-turn:
-  enabled: true
-  udp_port: 3478
+  use_external_ip: true
 
 keys:
-  74fecbea0002e0d3: 286573d94aaf51d03d9e23de95d1d3a
+  devkey: secret123
+
+webhook:
+  api_key: devkey
+  api_secret: secret123
+
+logging:
+  level: info
